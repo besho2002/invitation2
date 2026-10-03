@@ -1,0 +1,147 @@
+:root {
+  --paper: #fffdf9;
+  --gold: #c9a15b;
+  --gold-soft: #e8c98f;
+  --brown: #6b4a1e;
+  --ink: #5a4a35;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f1ece3;
+  font-family: "Cairo", sans-serif;
+  color: var(--ink);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  width: min(100%, 460px);
+  min-height: 645px;
+  padding: 36px 34px 60px;
+  background: var(--paper);
+  text-align: center;
+}
+
+.card > :not(.branch):not(.dots) { position: relative; z-index: 1; }
+
+/* ---------- decorative branches ---------- */
+.branch {
+  position: absolute;
+  width: 220px;
+  height: 300px;
+  opacity: .35;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 300' fill='none' stroke='%23d9b06a' stroke-width='1'%3E%3Cpath d='M20 295 C60 210 110 120 175 8'/%3E%3Cg fill='%23f6e7c8'%3E%3Cellipse cx='55' cy='235' rx='10' ry='28' transform='rotate(-40 55 235)'/%3E%3Cellipse cx='85' cy='215' rx='10' ry='30' transform='rotate(40 85 215)'/%3E%3Cellipse cx='85' cy='170' rx='10' ry='30' transform='rotate(-45 85 170)'/%3E%3Cellipse cx='120' cy='155' rx='10' ry='30' transform='rotate(35 120 155)'/%3E%3Cellipse cx='115' cy='105' rx='10' ry='30' transform='rotate(-45 115 105)'/%3E%3Cellipse cx='150' cy='90' rx='10' ry='28' transform='rotate(35 150 90)'/%3E%3Cellipse cx='150' cy='40' rx='9' ry='26' transform='rotate(-45 150 40)'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain;
+}
+.b-tr { top: -20px; right: -30px; transform: scaleX(-1) rotate(-8deg); }
+.b-tl { top: -30px; left: -50px; transform: rotate(-12deg); opacity: .22; }
+.b-bl { bottom: -20px; left: -30px; transform: scaleY(-1) rotate(8deg); }
+.b-br { bottom: -30px; right: -50px; transform: scale(-1, -1) rotate(8deg); opacity: .25; }
+
+.dots {
+  position: absolute;
+  width: 70px;
+  height: 90px;
+  background:
+    radial-gradient(circle 3px at 10px 12px, var(--gold) 98%, transparent) ,
+    radial-gradient(circle 2px at 40px 40px, var(--gold) 98%, transparent),
+    radial-gradient(circle 4px at 20px 70px, var(--gold-soft) 98%, transparent),
+    radial-gradient(circle 2px at 55px 80px, var(--gold) 98%, transparent);
+}
+.d-l { top: 150px; left: 0; }
+.d-t { top: 6px; left: 55%; width: 60px; height: 30px; }
+
+/* ---------- content ---------- */
+.verse {
+  font-family: "Amiri", serif;
+  font-size: 1.35rem;
+  line-height: 1.55;
+  color: var(--gold);
+}
+
+.flower { width: 170px; height: auto; margin: 10px auto 14px; display: block; }
+
+.title, .intro {
+  font-family: "Amiri", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--brown);
+}
+.intro { font-weight: 400; }
+
+.hosts {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 14px 0 26px;
+  font-size: .8rem;
+  color: #8a6a3a;
+  text-align: right;
+}
+.hosts ul { list-style: none; }
+.hosts li { line-height: 1.9; padding-inline-start: 16px; position: relative; }
+.hosts li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: .85em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.for { font-size: .9rem; color: var(--brown); margin-bottom: 4px; }
+
+.names {
+  font-family: "Amiri", serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.4;
+  color: var(--brown);
+  margin-bottom: 6px;
+}
+
+.date { font-family: "Amiri", serif; font-size: 1.1rem; color: var(--brown); margin-bottom: 16px; }
+
+.when {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 18px;
+}
+.when span {
+  flex: 1;
+  padding: 8px 0 6px;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  font-size: 1rem;
+  color: var(--brown);
+}
+.when .time { letter-spacing: .2em; color: #4a4a8a; font-family: "Amiri", serif; }
+
+.info {
+  font-size: .88rem;
+  line-height: 1.9;
+  color: var(--brown);
+  margin-bottom: 18px;
+}
+
+.closing {
+  margin-top: 26px;
+  font-family: "Amiri", serif;
+  font-size: 1.15rem;
+  color: var(--gold);
+}
+
+@media (max-width: 480px) {
+  .card { padding: 28px 22px 56px; }
+  .names { font-size: 1.5rem; }
+}
