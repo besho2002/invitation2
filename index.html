@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة زفاف | بيتر و مايفل</title>
+    <!-- استدعاء خطوط أنيقة تناسب دعوات الزفاف -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8a6a4b; /* درجة اللون البني الذهبي المطابقة للتصميم */
+            --bg-color: #fcfbf9;
+        }
+
+        body {
+            background-color: #e9e5de;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Amiri', serif;
+            color: var(--primary-color);
+        }
+
+        .invitation-card {
+            background-color: var(--bg-color);
+            width: 90%;
+            max-width: 650px;
+            padding: 50px 30px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            /* خلفية زخرفية بسيطة كبديل للفروع في الصورة */
+            background-image: 
+                radial-gradient(circle at 0% 0%, #f4eee3 20%, transparent 20%),
+                radial-gradient(circle at 100% 100%, #f4eee3 20%, transparent 20%);
+        }
+
+        .verse {
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-weight: bold;
+        }
+
+        .floral-divider {
+            width: 180px;
+            height: auto;
+            margin: 15px auto 25px;
+            display: block;
+        }
+
+        .subtitle {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .invitation-intro {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .hosts-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 35px;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .hosts-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        .hosts-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .hosts-list li::before {
+            content: "•";
+            position: absolute;
+            right: 0;
+            color: var(--primary-color);
+        }
+
+        .bride-groom {
+            font-family: 'Aref Ruqaa', serif;
+            font-size: 42px;
+            font-weight: bold;
+            margin: 30px 0;
+            line-height: 1.4;
+        }
+
+        .date-section {
+            margin: 30px 0;
+        }
+
+        .date-top {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .time-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--primary-color);
+            border-bottom: 1px solid var(--primary-color);
+            padding: 15px 40px;
+            font-size: 22px;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .location-details {
+            font-size: 20px;
+            line-height: 1.9;
+            margin: 30px 0;
+        }
+
+        .closing {
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .bride-groom { font-size: 32px; }
+            .time-row { width: 90%; padding: 15px 20px; }
+            .hosts-container { flex-direction: column; align-items: center; gap: 15px; }
+            .hosts-list { text-align: center; }
+            .hosts-list li { padding-right: 0; }
+            .hosts-list li::before { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        
+        <div class="verse">
+            فَوَجَدْتُ مَنْ تُحِبُّهُ نَفْسِي،<br>
+            فَأَمْسَكْتُهُ وَلَمْ أَرْخِهِ
+        </div>
+
+        <!-- رسمة مبسطة تعوض عن الوردة في الصورة، يمكنك لاحقاً استبدالها بـ <img src="flower.png"> -->
+        <svg class="floral-divider" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20 Q50 -10 100 20 Q150 50 190 20" fill="none" stroke="#8a6a4b" stroke-width="1.5"/>
+            <circle cx="100" cy="20" r="4" fill="#8a6a4b"/>
+            <circle cx="90" cy="15" r="3" fill="#8a6a4b"/>
+            <circle cx="110" cy="15" r="3" fill="#8a6a4b"/>
+            <path d="M30 20 H70 M130 20 H170" stroke="#8a6a4b" stroke-width="1"/>
+        </svg>
+
+        <div class="subtitle">دعوة زفاف</div>
+        <div class="invitation-intro">بكل الحب والود يدعوكم ويتشرف كل من</div>
+
+        <div class="hosts-container">
+            <ul class="hosts-list">
+                <li>الأستاذ/ عاطف عيسى جرجس</li>
+                <li>الأستاذ/ رايف عيسى جرجس</li>
+                <li>المهندس/ بيشوي هندي عيسى</li>
+            </ul>
+            <ul class="hosts-list">
+                <li>الأستاذ/ ملاك الشحات ابراهيم</li>
+            </ul>
+        </div>
+
+        <div class="invitation-intro">لحضور حفل زفاف</div>
+        
+        <div class="bride-groom">
+            م. بيتر هندي عيسى &amp; د. مايفل ملاك الشحات
+        </div>
+
+        <div class="date-section">
+            <div class="date-top">15 اكتوبر 2026</div>
+            <div class="time-row">
+                <div>الخميس</div>
+                <div>5:00 PM</div>
+            </div>
+        </div>
+
+        <div class="location-details">
+            صلاة الإكليل الساعة 5 م بكنيسة السيدة العذراء مريم<br>
+            بالعاشر من رمضان - المجاورة الاولي
+            <br><br>
+            ويشرفنا حضوركم الحفل المقام في قاعة رويال هاوس بالعاشر<br>
+            من رمضان - المجاورة 33 الساعة 7 م
+        </div>
+
+        <div class="closing">
+            فرحتنا هاتكمل بيكم
+        </div>
+
+    </div>
+
+</body>
+</html>
